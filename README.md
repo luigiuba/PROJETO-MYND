@@ -1,7 +1,7 @@
 # 🧠 MYND – Plataforma de Conexão entre Pacientes e Profissionais de Saúde Mental
 
 <p align="center">
-  <img src="LOGO PRO GIT.png" alt="Logo MYND" width="400">
+  <img src="logo branca.png" alt="Logo MYND" width="400">
 </p>
 
 <p align="center">
