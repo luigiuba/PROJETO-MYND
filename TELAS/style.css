@@ -1,0 +1,177 @@
+/* ==============================
+   ESTILO GERAL - MYND APP
+   Identidade visual:
+   Azul escuro: #081b47
+   Azul médio:  #4169e1
+   Rosa escuro: #b04a67
+   Rosa claro:  #d7839b
+   ============================== */
+
+/* ===== FONTES - LEAGUE SPARTAN ===== */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+/* ===== ESTILO BASE ===== */
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #ffffff;
+    color: #081b47;
+    margin: 0;
+    padding: 0;
+}
+/* Centraliza apenas a tela de boas-vindas */
+body:not(.cadastro) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* ===== CONTAINER CENTRAL ===== */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    width: 1000px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto 10px auto;
+    filter: drop-shadow(0 6px 14px rgba(8, 27, 71, 0.35));
+    animation: fadeIn 1s ease-in-out;
+    line-height: 0;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TÍTULOS E TEXTOS ===== */
+h1 {
+    color: #081b47;
+    font-size: 34px;
+    margin: 6px 0 8px 0;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    margin: 2px 0 16px 0;
+}
+
+/* ===== BOTÕES ===== */
+.buttons {
+    margin-top: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    margin: 8px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.22s ease;
+    cursor: pointer;
+}
+
+/* Botão principal (Azul escuro) */
+.btn.primary {
+    background-color: #081b47;
+    color: #ffffff;
+}
+.btn.primary:hover {
+    background-color: #4169e1;
+}
+
+/* Botão secundário (Rosa) */
+.btn.secondary {
+    background-color: #b04a67;
+    color: #ffffff;
+}
+.btn.secondary:hover {
+    background-color: #d7839b;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+    margin-top: 12px;
+}
+
+input {
+    width: 90%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border: 2px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus {
+    border-color: #4169e1;
+    box-shadow: 0 0 6px rgba(65, 105, 225, 0.25);
+    outline: none;
+}
+
+/* ===== TELA DE CADASTRO ===== */
+body.cadastro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.cadastro .container {
+    max-width: 540px;          
+}
+
+body.cadastro .logo {
+    width: 420px;             
+    max-width: 85%;
+    margin-bottom: 8px;
+}
+
+body.cadastro h1 {
+    font-size: 30px;
+}
+
+body.cadastro p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+body.cadastro input {
+    padding: 10px 12px;
+    font-size: 15px;
+}
+
+body.cadastro .btn {
+    padding: 12px 28px;
+    font-size: 16px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 20px;
+    }
+    .logo {
+        width: 90%;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+    input {
+        width: 100%;
+    }
+}
