@@ -18,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Centraliza apenas a tela de boas-vindas */
 body:not(.cadastro) {
     display: flex;
@@ -25,7 +26,6 @@ body:not(.cadastro) {
     align-items: center;
     height: 100vh;
 }
-
 
 /* ===== CONTAINER CENTRAL ===== */
 .container {
@@ -45,6 +45,26 @@ body:not(.cadastro) {
     animation: fadeIn 1s ease-in-out;
     line-height: 0;
 }
+
+.logo-home {
+    width: 500px;
+    max-width: 90%;
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* ===== CENTRALIZAÇÃO WELCOME ===== */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 20px;  /* espaço para evitar corte da logo */
+    box-sizing: border-box;
+}
+
 
 /* ===== ANIMAÇÃO ===== */
 @keyframes fadeIn {
@@ -158,12 +178,130 @@ body.cadastro .btn {
     font-size: 16px;
 }
 
+/* ===== RECURSOS PAGE ===== */
+.recursos {
+    text-align: center;
+    padding: 25px 15px;
+    background: #ffffff;
+    color: #081b47;
+    min-height: 100vh;
+}
+
+.subtexto {
+    font-size: 18px;
+    color: #081b47;
+    margin-bottom: 30px;
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.recurso-card {
+    background: white;
+    color: #081b47;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recurso-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.recurso-card h2 {
+    margin-bottom: 8px;
+}
+
+.recurso-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* ===== BOTÕES ESTILIZADOS ===== */
+.btn.primary {
+    background-color: #081b47;
+    color: white;
+}
+.btn.primary:hover {
+    background-color: #102f6a;
+}
+
+.btn.secondary {
+    background-color: #3b6cf3;
+    color: white;
+}
+.btn.secondary:hover {
+    background-color: #274ed1;
+}
+
+.btn.outline {
+    border: 2px solid #081b47;
+    color: #081b47;
+    background: transparent;
+}
+.btn.outline:hover {
+    background-color: #081b47;
+    color: white;
+}
+
+.btn.neutral {
+    background-color: #00aaff;
+    color: white;
+}
+.btn.neutral:hover {
+    background-color: #0088cc;
+}
+
+.btn.voltar {
+    background-color: white;
+    color: #081b47;
+    border: 2px solid white;
+}
+.btn.voltar:hover {
+    background-color: #e0e7ff;
+    color: #081b47;
+}
+
+/* ===== LOGIN BUTTON - WELCOME PAGE ===== */
+.login-section {
+    margin-top: 10px;
+}
+
+.login-section p {
+    color: #081b47;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.btn.login-btn {
+    background-color: white;
+    color: #081b47;
+    border: 2px solid #081b47;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn.login-btn:hover {
+    background-color: #081b47;
+    color: white;
+    box-shadow: 0 4px 10px rgba(8, 27, 71, 0.3);
+}
+
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 600px) {
     .container {
         padding: 0 20px;
     }
-    .logo {
+    .logo, .logo-home {
         width: 90%;
     }
     .btn {
@@ -174,4 +312,21 @@ body.cadastro .btn {
     input {
         width: 100%;
     }
+}
+/* ===== LOGO NA PÁGINA DE RECURSOS ===== */
+.recursos .logo-home {
+    width: 280px;     /* tamanho reduzido e mais equilibrado */
+    max-width: 85%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.logo-home {
+    width: 500px;
+    max-width: 90%;
+    margin-bottom: 25px;
+    animation: fadeIn 1.2s ease-in-out;
+
+    /* 🔹 sombra igual à das outras telas */
+    filter: drop-shadow(0 6px 14px rgba(8, 27, 71, 0.35));
+    line-height: 0;
 }
